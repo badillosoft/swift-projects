@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataDealer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vI-YJ-y16">
+                                <rect key="frame" x="141" y="432.5" width="102" height="30"/>
+                                <state key="normal" title="Crear registros"/>
+                                <connections>
+                                    <action selector="createRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnJ-f1-nlp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxY-8e-6lw">
+                                <rect key="frame" x="138" y="507.5" width="108" height="30"/>
+                                <state key="normal" title="Borrar registros"/>
+                                <connections>
+                                    <action selector="deleteRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CFn-cj-YWP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puN-t8-e6J">
+                                <rect key="frame" x="0.0" y="362" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4vI-YJ-y16" firstAttribute="centerX" secondItem="NxY-8e-6lw" secondAttribute="centerX" id="0Ou-IF-kqg"/>
+                            <constraint firstItem="4vI-YJ-y16" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="Id5-8D-PKI"/>
+                            <constraint firstItem="NxY-8e-6lw" firstAttribute="top" secondItem="4vI-YJ-y16" secondAttribute="bottom" constant="45" id="Loi-kh-tam"/>
+                            <constraint firstItem="4vI-YJ-y16" firstAttribute="top" secondItem="puN-t8-e6J" secondAttribute="bottom" constant="50" id="MmB-1y-4Cl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="puN-t8-e6J" secondAttribute="trailing" id="R4u-hd-tmz"/>
+                            <constraint firstItem="puN-t8-e6J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="318" id="fvv-Ui-q6f"/>
+                            <constraint firstItem="puN-t8-e6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wem-nP-n5i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="summaryLabel" destination="puN-t8-e6J" id="syh-3X-WvI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="139"/>
+        </scene>
+    </scenes>
+</document>

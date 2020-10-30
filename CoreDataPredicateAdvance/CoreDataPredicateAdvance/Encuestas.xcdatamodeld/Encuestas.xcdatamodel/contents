@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Encuesta" representedClassName="Encuesta" syncable="YES" codeGenerationType="class">
+        <attribute name="fechaFin" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="fechaInicio" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="nombre" attributeType="String"/>
+        <relationship name="personas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Persona" inverseName="encuestas" inverseEntity="Persona"/>
+        <relationship name="preguntas" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Pregunta" inverseName="encuesta" inverseEntity="Pregunta"/>
+    </entity>
+    <entity name="Persona" representedClassName="Persona" syncable="YES" codeGenerationType="class">
+        <attribute name="edad" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="genero" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="nombre" attributeType="String"/>
+        <relationship name="encuestas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Encuesta" inverseName="personas" inverseEntity="Encuesta"/>
+    </entity>
+    <entity name="Pregunta" representedClassName="Pregunta" syncable="YES" codeGenerationType="class">
+        <attribute name="descripcion" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="tipo" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String"/>
+        <attribute name="valor" optional="YES" attributeType="String"/>
+        <relationship name="encuesta" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Encuesta" inverseName="preguntas" inverseEntity="Encuesta"/>
+    </entity>
+    <elements>
+        <element name="Encuesta" positionX="150.23046875" positionY="-38.9453125" width="128" height="73"/>
+        <element name="Persona" positionX="-134.890625" positionY="-98.0390625" width="129.53515625" height="28"/>
+        <element name="Pregunta" positionX="146.41015625" positionY="-361.5625" width="128" height="58"/>
+    </elements>
+</model>
